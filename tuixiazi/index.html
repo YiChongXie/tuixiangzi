@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>box</title>
+		<script src="js/utils.js"></script>
+		<script src="js/maps.js"></script>
+		<script src="js/man.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/game.js"></script>
+		<script src="js/scene_factory.js"></script>
+		<script src="js/scene/scene.js"></script>
+		<script src="js/scene/scene_main.js"></script>
+		<script src="js/scene/scene_title.js"></script>
+		<script src="js/scene/scene_editor.js"></script>
+		
+		<style>
+			.container {
+				margin: 0 auto;
+				width: 800px;
+				text-align: center;
+				overflow: hidden;
+			}
+			#game {
+				float: left;
+			}
+			#help {
+				float: right;
+				text-align: left;
+				width: 300px;
+			}
+			#canvas {
+				border: 1px solid #bbb;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1>推箱子</h1>
+			<div id="game">
+				<canvas id="canvas" width="400" height="400"></canvas>
+			</div>
+			<div id="help">
+				<h3>帮助：</h3>
+				<p>
+					s - 开始游戏<br>
+					e - 进入地图编辑模式
+				</p>
+				<p>方向键（↑ ← ↓ →）控制人物移动</p>
+				<p>r - 重新开始这一关</p>
+				<h4>地图编辑模式下</h4>
+				<p>
+					鼠标单击地图格子来修改方块类型<br>
+					c - 保存地图<br>
+					z - 重置地图<br>
+					x - 退出地图编辑模式
+				</p>
+			</div>
+		</div>
+		<script>
+			_main('#canvas',400, 400)
+		</script>
+	</body>
+</html>
